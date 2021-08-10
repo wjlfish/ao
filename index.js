@@ -19,6 +19,7 @@ require('electron-dl')();
 require('electron-context-menu')();
 
 let exiting = false;
+let shown = false;
 let mainWindow;
 
 if (!app.requestSingleInstanceLock()) {
@@ -36,33 +37,33 @@ app.on('second-instance', () => {
 });
 
 function createMainWindow() {
-  const AoWindow = new BrowserWindow(win.defaultOpts);
+  const aoWindow = new BrowserWindow(win.defaultOpts);
 
-  AoWindow.loadURL(url.app);
+  aoWindow.loadURL(url.app);
 
-  AoWindow.on('close', e => {
+  aoWindow.on('close', e => {
     if (!exiting) {
       e.preventDefault();
 
       if (is.darwin) {
         app.hide();
       } else {
-        AoWindow.hide();
+        aoWindow.hide();
       }
     }
   });
 
-  AoWindow.on('page-title-updated', e => {
+  aoWindow.on('page-title-updated', e => {
     e.preventDefault();
   });
 
-  AoWindow.on('unresponsive', log);
+  aoWindow.on('unresponsive', log);
 
-  AoWindow.webContents.on('did-navigate-in-page', (_, url) => {
+  aoWindow.webContents.on('did-navigate-in-page', (_, url) => {
     settings.set('lastURL', url);
   });
 
-  return AoWindow;
+  return aoWindow;
 }
 
 app.on('ready', () => {
@@ -83,10 +84,13 @@ app.on('ready', () => {
     const stylesheets = fs.readdirSync(file.style);
     stylesheets.forEach(x => webContents.insertCSS(readSheet(x)));
 
-    if (settings.get('launchMinimized')) {
-      mainWindow.minimize();
-    } else {
-      mainWindow.show();
+    if(!shown) {
+      if (settings.get('launchMinimized')) {
+        mainWindow.minimize();
+      } else {
+        mainWindow.show();
+      }
+      shown = true;
     }
   });
 

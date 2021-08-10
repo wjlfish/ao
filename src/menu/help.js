@@ -14,6 +14,9 @@ module.exports = {
         shell.openExternal(url.license);
       }
     }, {
+
+      type: 'separator'
+    }, {
       label: `当前版本 ${app.getVersion()}`,
       enabled: false
     }, {
