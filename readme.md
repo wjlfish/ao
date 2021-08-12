@@ -79,4 +79,4 @@ Ao，一款基于Microsoft To Do的第三方GTD应用，旨在让你更加方便
 
 ## License
 
-[MIT](https://github.com/wjlfish/Ao/blob/master/license.md)
+[MIT](https://github.com/wjlfish/ao/blob/master/license.md)
