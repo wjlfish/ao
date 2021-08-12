@@ -42,3 +42,19 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
     padding-left: 0px !important;
   }
 }
+.sidebar-footer {
+  display: none;
+}
+.settingsSection.settings-connect {
+  display: none;
+}
+.settingsSection.settings-about {
+  display: none;
+}
+.settingsSection.settings-integrations {
+  display: none;
+}
+
+#todoWhatsNewBtn_container { display: none;}
+#mectrl_viewAccount { display: none;}
+#mectrl_ShellAboutMe { display: none;}

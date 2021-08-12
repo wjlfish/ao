@@ -19,6 +19,7 @@ require('electron-dl')();
 require('electron-context-menu')();
 
 let exiting = false;
+let shown = false;
 let mainWindow;
 
 if (!app.requestSingleInstanceLock()) {
@@ -36,33 +37,35 @@ app.on('second-instance', () => {
 });
 
 function createMainWindow() {
-  const AoWindow = new BrowserWindow(win.defaultOpts);
+  const aoWindow = new BrowserWindow(win.defaultOpts);
+  webPreferences: {
+    nodeIntegration: true
+  }
+  aoWindow.loadURL(url.app);
 
-  AoWindow.loadURL(url.app);
-
-  AoWindow.on('close', e => {
+  aoWindow.on('close', e => {
     if (!exiting) {
       e.preventDefault();
 
       if (is.darwin) {
         app.hide();
       } else {
-        AoWindow.hide();
+        aoWindow.hide();
       }
     }
   });
 
-  AoWindow.on('page-title-updated', e => {
+  aoWindow.on('page-title-updated', e => {
     e.preventDefault();
   });
 
-  AoWindow.on('unresponsive', log);
+  aoWindow.on('unresponsive', log);
 
-  AoWindow.webContents.on('did-navigate-in-page', (_, url) => {
+  aoWindow.webContents.on('did-navigate-in-page', (_, url) => {
     settings.set('lastURL', url);
   });
 
-  return AoWindow;
+  return aoWindow;
 }
 
 app.on('ready', () => {
@@ -76,17 +79,25 @@ app.on('ready', () => {
   if (!settings.get('hideTray')) {
     tray.create();
   }
-
+  mainWindow.webContents.on('did-finish-load', function() {
+    mainWindow.webContents.executeJavaScript("var fna = function(){ document.getElementById('O365_HeaderLeftRegion').innerHTML = '<img style=\"position: relative;display: inline-block;padding: 5px;white-space: nowrap;height: 80%;\" src=\"https://ao.wjlnb.com/highres-icon.png\" height=\"25px\"></img>'; }");
+    mainWindow.webContents.executeJavaScript("var fn = function(){ document.getElementById('owaBranding_container').innerHTML = '<span style=\"color:white;line-height:48px;font-size:18px;font-weight:600;\">&nbsp;Ao&nbsp;</span><span style=\"color:white;line-height:48px;font-size:11px;font-weight:600;\">by Kevin Wang&nbsp;</span>'; }");
+    mainWindow.webContents.executeJavaScript("setInterval(fn,1000);");
+    mainWindow.webContents.executeJavaScript("setInterval(fna,1000);");
+  });
   const {webContents} = mainWindow;
 
   webContents.on('dom-ready', () => {
     const stylesheets = fs.readdirSync(file.style);
     stylesheets.forEach(x => webContents.insertCSS(readSheet(x)));
 
-    if (settings.get('launchMinimized')) {
-      mainWindow.minimize();
-    } else {
-      mainWindow.show();
+    if(!shown) {
+      if (settings.get('launchMinimized')) {
+        mainWindow.minimize();
+      } else {
+        mainWindow.show();
+      }
+      shown = true;
     }
   });
 
@@ -112,3 +123,4 @@ app.on('before-quit', () => {
     settings.set('lastWindowState', mainWindow.getBounds());
   }
 });
+

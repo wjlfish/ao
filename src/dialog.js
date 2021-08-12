@@ -62,10 +62,10 @@ class Dialog {
 
   _update(version) {
     return this._create({
-      buttons: ['好嘞！'],
-      detail: `软件暂无新版本`,
-      message: '软件暂无新版本',
-      title: 'Ao - 无更新可用'
+      buttons: ['下载', '忽略'],
+      detail: `发现新版本！！！！`,
+      message: `${version} 可以更新啦`,
+      title: `Ao - 发现新版本:${version}`
     });
   }
 
@@ -120,3 +120,4 @@ class Dialog {
 }
 
 module.exports = new Dialog();
+

@@ -88,6 +88,11 @@ module.exports = [
   }, {
     type: 'separator'
   }, {
+    role: 'about',
+    click() {
+      dialog.confirmAbout();
+    }
+  }, {
     label: '退出软件',
     click() {
       dialog.confirmExit();
