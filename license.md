@@ -1,14 +1,14 @@
-��װ����Э��
+###安装许可协议
 
-��ӭ�㰲װAo��һ�����Microsoft To Do�ĵ�����GTDӦ�ã�ּ��������ӷ���ع滮������
-��ͬ��Microsoft To Do���ǣ�������֧�����浯�����ѣ����ԭ��������Ի���
-������վ��https://ao.wjlnb.com
-��������ȫ��Դ��Դ����λ�ڣ�https://github.com/wjlfish/ao
-�������һ������������ͬ�������ķ���Э�飨https://docs.wjlnb.com/service������˽���ߣ�https://docs.wjlnb.com/privacy��
-��л�����汾���ߣ�Klaus Sinani <klaussinani@gmail.com>�����İ汾����2019��ֹͣ������
+欢迎你安装Ao，一款基于Microsoft To Do的第三方GTD应用，旨在让你更加方便地规划你的生活。
+不同于Microsoft To Do的是，本软件支持桌面弹窗提醒，相比原版更加人性化。
+软件网站：https://ao.wjlnb.com
+本软件完全开源，源代码位于：https://github.com/wjlfish/ao
+点击“下一步”即代表您同意软件的服务协议（https://docs.wjlnb.com/service）和隐私政策（https://docs.wjlnb.com/privacy）
+鸣谢初代版本作者：Klaus Sinani <klaussinani@gmail.com>，他的版本已于2019年停止开发。
 
 
-��ԴЭ��
+###开源协议
 MIT License
 
 Copyright (c) 2021 - present Kevin Wang <wjlfish@qq.com> (wjlnb.com)
