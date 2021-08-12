@@ -38,9 +38,11 @@ app.on('second-instance', () => {
 
 function createMainWindow() {
   const aoWindow = new BrowserWindow(win.defaultOpts);
+
   webPreferences: {
     nodeIntegration: true
   }
+
   aoWindow.loadURL(url.app);
 
   aoWindow.on('close', e => {
