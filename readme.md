@@ -42,7 +42,7 @@ Ao，一款基于Microsoft To Do的第三方GTD应用，旨在让你更加方便
 -------------------------- | --------------------------
 启用自动夜览模式           | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>N</kbd> 
 添加到期日                 | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>T</kbd> <kbd>T</kbd>
-添加任务到我的一天         | <kbd>Cmd/Ctrl</kbd> <kbd>K</kbd> <kbd>
+添加任务到我的一天         | <kbd>Cmd/Ctrl</kbd> <kbd>K</kbd>
 完成任务                   | <kbd>Ctrl/Ctrl</kbd> <kbd>Shift</kbd> <kbd>N</kbd> <kbd>N</kbd>
 删除列表                   | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>D</kbd> 
 删除待办事项               | <kbd>Cmd/Ctrl</kbd> <kbd>D</kbd> <kbd>D</kbd>
@@ -58,7 +58,7 @@ Ao，一款基于Microsoft To Do的第三方GTD应用，旨在让你更加方便
 重命名待办事项             | <kbd>Cmd/Ctrl</kbd> <kbd>T</kbd> 
 重置缩放级别               | <kbd>Cmd/Ctrl</kbd> <kbd>0</kbd> <kbd>0</kbd>
 返回待办事项               | <kbd>Esc</kbd>
-搜索待办事项               | <kbd>Cmd/Ctrl</kbd> <kbd>F</kbd> <kbd>
+搜索待办事项               | <kbd>Cmd/Ctrl</kbd> <kbd>F</kbd> 
 设置总是在顶部             | <kbd>Ctrl/Ctrl</kbd> <kbd>Shift</kbd> <kbd>P</kbd> <kbd>P</kbd> 
 设置提醒                   | <kbd>Ctrl/Ctrl</kbd> <kbd>Shift</kbd> <kbd>E</kbd> <kbd>E</kbd>
 退出                       | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>Q</kbd> 
@@ -69,8 +69,8 @@ Ao，一款基于Microsoft To Do的第三方GTD应用，旨在让你更加方便
 切换已计划好的             | <kbd>Cmd/Ctrl</kbd> <kbd>P</kbd> <kbd>P</kbd>
 切换深褐色主题             | <kbd>Cmd/Ctrl</kbd> <kbd>G</kbd> <kbd>G/<kbd>
 切换设置                   | <kbd>Cmd/Ctrl</kbd> <kbd>,</kbd>
-切换侧边栏                 | <kbd>Cmd/Ctrl</kbd> <kbd>O</kbd> <kbd>
-切换任务                   | <kbd>Cmd/Ctrl</kbd> <kbd>J</kbd> </kbd>
+切换侧边栏                 | <kbd>Cmd/Ctrl</kbd> <kbd>O</kbd> 
+切换任务                   | <kbd>Cmd/Ctrl</kbd> <kbd>J</kbd> 
 切换窗口菜单               | <kbd>Alt</kbd></kbd>
 
 <br/>
