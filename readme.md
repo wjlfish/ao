@@ -66,8 +66,8 @@ Ao，一款基于Microsoft To Do的第三方GTD应用，旨在让你更加方便
 切换深色主题               | <kbd>Cmd/Ctrl</kbd> <kbd>H</kbd>
 切换重要内容               | <kbd>Cmd/Ctrl</kbd> <kbd>I</kbd>
 切换我的一天               | <kbd>Cmd/Ctrl</kbd> <kbd>M</kbd>
-切换已计划好的             | <kbd>Cmd/Ctrl</kbd> <kbd>P</kbd> <kbd>P</kbd>
-切换深褐色主题             | <kbd>Cmd/Ctrl</kbd> <kbd>G</kbd> <kbd>G<kbd>
+切换已计划好的             | <kbd>Cmd/Ctrl</kbd> <kbd>P</kbd>
+切换深褐色主题             | <kbd>Cmd/Ctrl</kbd> <kbd>G</kbd>
 切换设置                   | <kbd>Cmd/Ctrl</kbd> <kbd>,</kbd>
 切换侧边栏                 | <kbd>Cmd/Ctrl</kbd> <kbd>O</kbd> 
 切换任务                   | <kbd>Cmd/Ctrl</kbd> <kbd>J</kbd> 
